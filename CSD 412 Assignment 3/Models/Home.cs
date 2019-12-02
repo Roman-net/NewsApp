@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace NewsApp_by_Group_D.Models
 {
-    public class HomeModel
+    public class Home
     {
 
         //Properties
         public string name { get; set; }
-    
+
 
 
 

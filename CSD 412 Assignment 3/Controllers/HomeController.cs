@@ -10,6 +10,8 @@ using System.Net;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 using NewsApp_by_Group_D.Models;
+using CSD_412_Assignment_3.Controllers;
+using NewsApp_by_Group_D.Controllers;
 
 namespace CSD_412_Assignment_3.Controllers
 {
@@ -22,6 +24,7 @@ namespace CSD_412_Assignment_3.Controllers
             _logger = logger;
         }
 
+        /*
         private List<NewsEntry> parseJson(string json)
        // private string parseJson(string json)
         {
@@ -40,24 +43,27 @@ namespace CSD_412_Assignment_3.Controllers
             { NewsEntries.Add(JsonSerializer.Deserialize<NewsEntry>(s)); }
 
             return NewsEntries;
-
-
         }
+        */
+
+
+
+
+        NewsAPIParse parse1 = new NewsAPIParse();
+
+
 
         public IActionResult Index(){
            // List<NewsEntry>
 
 
-            var url = "https://newsapi.org/v2/top-headlines?" +
-              "country=us&" +
-              "apiKey=1085fdb5600240acbd2b45cc9d32361d";
-
+            var url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=1085fdb5600240acbd2b45cc9d32361d";
             var json = new WebClient().DownloadString(url);
 
 
             //  Console.WriteLine(json);
 
-              return View(parseJson(json));
+              return View(parse1);
           // return new ContentResult { Content = parseJson(json) };
         }
 
