@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NewsApp_by_Group_D.Models
+namespace CSD_412_Assignment_3.Models
 {
 
     public class Source
